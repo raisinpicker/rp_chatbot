@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains rp_chatbot.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function rp_chatbot_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the rp_chatbot module.
+    case 'help.page.rp_chatbot':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>...</p>';
+      return $output;
+
+    default:
+  }
+}
